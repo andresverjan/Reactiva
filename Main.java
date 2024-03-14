@@ -21,5 +21,20 @@ public class Main {
         System.out.println(count);
     }
 
+    calcular(10);
 
 }
+ public static int fibonacci(int n) {
+        if (n <= 1)
+            return n;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
+    public static void calcular(int n) {
+        System.out.println("los primeros " + n + "de la serie fibonacci son: ");
+        for (int i = 0; i < n; i++) {
+            if (fibonacci(i) % 2 == 0) {
+                System.out.println(fibonacci(i) + " ");
+            }
+        }
+    }
