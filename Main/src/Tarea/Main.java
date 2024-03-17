@@ -1,8 +1,8 @@
 package Tarea;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -26,14 +26,34 @@ public class Main {
 
 
         // Modo declarativo para estudiantes de signo "Acuario"
-        List<Estudiante> estudiantesAcuario = new ArrayList<>();
+        List<Estudiante> estudiantesAcuarioDeclarativo = estudiantes.stream()
+                .filter(estudiante -> "Acuario".equalsIgnoreCase(estudiante.getSigno()))
+                .collect(Collectors.toList());
+
+        // Imprimir resultados de estudiantes de signo "Acuario"
+        System.out.println("Estudiantes de signo Acuario Declarativo:");
+        estudiantesAcuarioDeclarativo.forEach(estudiante -> System.out.println(estudiante.getNombre() + " " + estudiante.getApellido()));
+
+
+        // Modo impertavio para estudiantes de signo "Acuario"
+        List<Estudiante> estudiantesAcuarioImperativo = new ArrayList<>();
         for (Estudiante estudiante : estudiantes) {
             if (estudiante.getSigno() != null && estudiante.getSigno().equalsIgnoreCase("Acuario")) {
-                estudiantesAcuario.add(estudiante);
+                estudiantesAcuarioImperativo.add(estudiante);
             }
         }
 
         // Modo declarativo para estudiantes mayores de 25 años
+        List<Estudiante> estudiantesMayores25Declarativo = estudiantes.stream()
+                .filter(estudiante -> estudiante.getEdad() > 25)
+                .collect(Collectors.toList());
+
+        // Imprimir resultados de estudiantes mayores de 25 años
+        System.out.println("\nEstudiantes mayores de 25 años Declarativo:");
+        estudiantesMayores25Declarativo.forEach(estudiante -> System.out.println(estudiante.getNombre() + " " + estudiante.getApellido()));
+
+
+        // Modo impertavio para estudiantes mayores de 25 años
         List<Estudiante> estudiantesMayores25 = new ArrayList<>();
         for (Estudiante estudiante : estudiantes) {
             if (estudiante.getEdad() > 25) {
@@ -42,8 +62,8 @@ public class Main {
         }
 
         // Imprimir los resultados
-        System.out.println("Estudiantes de signo Acuario:");
-        for (Estudiante estudiante : estudiantesAcuario) {
+        System.out.println("\nEstudiantes de signo Acuario:");
+        for (Estudiante estudiante : estudiantesAcuarioImperativo) {
             System.out.println(estudiante.getNombre() + " " + estudiante.getApellido());
         }
 
