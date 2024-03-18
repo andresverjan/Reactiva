@@ -1,2 +1,0 @@
-# Reactiva
-Java Reactiva
