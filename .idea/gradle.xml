@@ -13,6 +13,15 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Ej-01Fibonacci/Ej-03ObervableRx" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../../Program Files/gradle-8.2.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Ej-01Fibonacci/Ej-03ObervableRx" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Ej-01Tarea1/untitled" />
         <option name="gradleHome" value="$PROJECT_DIR$/../../../../../../Program Files/gradle-8.2.1" />
         <option name="modules">
