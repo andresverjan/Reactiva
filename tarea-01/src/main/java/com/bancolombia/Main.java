@@ -42,6 +42,7 @@ public class Main {
 
         System.out.println("Estudiantes con signo Acuario:");
         estudiantesAcuario.forEach(System.out::println);
+        System.out.println();
 
         return estudiantes;
     }
@@ -57,6 +58,7 @@ public class Main {
 
         System.out.println("Estudiantes mayores de 25 años:");
         estudiantesMayoresde25.forEach(System.out::println);
+        System.out.println();
 
         return estudiantes;
     }
@@ -67,6 +69,7 @@ public class Main {
 
         System.out.println("Estudiantes con signo Acuario:");
         estudiantesAcuario.forEach(System.out::println);
+        System.out.println();
 
         return estudiantesAcuario;
     }
@@ -77,6 +80,7 @@ public class Main {
 
         System.out.println("Estudiantes mayores de 25 años:");
         estudiantesMayoresde25.forEach(System.out::println);
+        System.out.println();
 
         return estudiantesMayoresde25;
     }
