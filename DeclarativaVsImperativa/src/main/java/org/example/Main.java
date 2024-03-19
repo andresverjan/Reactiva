@@ -18,18 +18,21 @@ public class Main {
         String signo = "acuario";
         int edad = 25;
 
+        printPersonasPorSignoDeclarativo(personas, signo);
+        printPersonasPorSignoImperativo(personas, signo);
+        printPersonasMayorEdadDeclarativo(personas, edad);
+        printPersonasMayorEdadImperativa(personas, edad);
+    }
+
+    public static void printPersonasPorSignoDeclarativo(List<Persona> personas, String signo) {
         System.out.println("1. Usando el modo declarativo obtener todos los estudiantes que son de signo "
                 .concat(signo).concat(".\n"));
         personas.stream()
                 .filter(persona -> persona.getSigno().equalsIgnoreCase(signo))
                 .forEach(System.out::println);
+    }
 
-        System.out.println("\n2. Usando el modo declarativo obtener todos los estudiantes donde la edad es mayor a "
-                .concat(String.valueOf(edad)).concat(".\n"));
-        personas.stream()
-                .filter(persona -> persona.getEdad() > 25)
-                .forEach(System.out::println);
-
+    public static void printPersonasPorSignoImperativo(List<Persona> personas, String signo) {
         System.out.println("\n3. Usando el modo imperativo obtener todos los estudiantes que son de signo "
                 .concat(signo).concat(".\n"));
         for (Persona persona : personas) {
@@ -37,7 +40,17 @@ public class Main {
                 System.out.println(persona);
             }
         }
+    }
 
+    public static void printPersonasMayorEdadDeclarativo(List<Persona> personas, int edad) {
+        System.out.println("\n2. Usando el modo declarativo obtener todos los estudiantes donde la edad es mayor a "
+                .concat(String.valueOf(edad)).concat(".\n"));
+        personas.stream()
+                .filter(persona -> persona.getEdad() > 25)
+                .forEach(System.out::println);
+    }
+
+    public static void printPersonasMayorEdadImperativa(List<Persona> personas, int edad) {
         System.out.println("\n4. Usando el modo imperativo obtener todos los estudiantes donde la edad es mayor a "
                 .concat(String.valueOf(edad)).concat(".\n"));
         for (Persona persona : personas) {
