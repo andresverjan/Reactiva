@@ -7,13 +7,9 @@ import java.util.stream.Collectors;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static List<Persona> obtenerEstudiantesAcuario(List<Persona> estudiantes) {
-        List<Persona> estudiantesAcuario = new ArrayList<>();
-        for (Persona estudiante : estudiantes) {
-            if ("Acuario".equalsIgnoreCase(estudiante.getSigno())) {
-                estudiantesAcuario.add(estudiante);
-            }
-        }
-        return estudiantesAcuario;
+        return estudiantes.stream()
+                .filter(estudiante -> estudiante.getSigno() == "Acuario" )
+                .collect(Collectors.toList());
     }
     public static List<Persona> obtenerEstudiantesEdadMayorA25(List<Persona> estudiantes) {
         return estudiantes.stream()
