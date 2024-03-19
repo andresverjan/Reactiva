@@ -19,12 +19,14 @@ public class Main {
                 .filter(num -> num > 10)
                 .count();
         System.out.println(count);
+
+        calcular(10);
     }
 
-    calcular(10);
 
-}
- public static int fibonacci(int n) {
+
+
+    public static int fibonacci(int n) {
         if (n <= 1)
             return n;
         return fibonacci(n - 1) + fibonacci(n - 2);
@@ -38,3 +40,4 @@ public class Main {
             }
         }
     }
+}
