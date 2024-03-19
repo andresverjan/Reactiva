@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="DeclarativaVsImperativa" external.linked.project.path="$MODULE_DIR$/DeclarativaVsImperativa" external.root.project.path="$MODULE_DIR$/DeclarativaVsImperativa" external.system.id="GRADLE" external.system.module.group="org.example" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/DeclarativaVsImperativa">
+      <excludeFolder url="file://$MODULE_DIR$/DeclarativaVsImperativa/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/DeclarativaVsImperativa/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="95c4146e-3828-4fb3-9ede-643d6f35e89f" />
+  </component>
+</module>
