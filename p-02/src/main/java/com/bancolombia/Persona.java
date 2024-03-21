@@ -61,7 +61,7 @@ public class Persona {
                 ", telefono='" + telefono + '\'' +
                 ", edad=" + edad +
                 ", signo='" + signo + '\'' +
-                ")";
+                " )";
     }
 }
 
