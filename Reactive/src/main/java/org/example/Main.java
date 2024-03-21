@@ -5,13 +5,21 @@ import io.reactivex.Observer;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import org.example.model.Persona;
+import org.example.model.PersonaObservable;
 
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         personasObservables();
+        personasObservable();
        ejercicioClase();
+    }
+
+    private static void personasObservable() {
+        PersonaObservable personaObservable = new PersonaObservable();
+        personaObservable.setNombre(Observable.create(emitter -> emitter.onNext("Holita")));
+        personaObservable.setApellido(Observable.create(emitter -> emitter.onNext("Holita2")));
     }
 
     private static void ejercicioClase() {
