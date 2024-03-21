@@ -1,13 +1,13 @@
-package com.co.bancolombia.activitylearn1;
+package com.co.bancolombia;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ActivityLearn1ApplicationTests {
+class FuncionalProgrammingApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
