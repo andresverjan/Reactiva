@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaReactivo.main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaReactivo.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.example.JavaReactivo.main.iml" filepath="$PROJECT_DIR$/.idea/modules/org.example.JavaReactivo.main.iml" />
     </modules>
   </component>
 </project>

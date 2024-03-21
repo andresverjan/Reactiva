@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2c7479c2-e71d-4dba-83bb-cba9519075e1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Ejercicio3 Persona - tarea/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio3 Persona - tarea/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ObservableRxJx/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ObservableRxJx/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ObservableRxJx/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ObservableRxJx/src/main/java/org/example/PersonaObservable.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2e017xITjZPeHtbhCztHalB3bbr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/dmvega/Documents/programacion reactiva/Reactiva/Daniel Miguel Vega camargo/Ejercicio 4 ObservableRxJx - persona"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c7479c2-e71d-4dba-83bb-cba9519075e1" name="Changes" comment="" />
+      <created>1711026517778</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711026517778</updated>
+    </task>
+    <servers />
+  </component>
+</project>
