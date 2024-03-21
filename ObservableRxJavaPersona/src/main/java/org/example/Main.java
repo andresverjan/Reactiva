@@ -1,34 +1,39 @@
 package org.example;
 
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
+
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.Observable;
 import org.example.model.Persona;
+import org.example.model.PublishPersona;
 
 public class Main {
-    public static void main(String[] args) {
-        Persona persona = new Persona();
+    /*
+    Vamos a modificar la clase Persona, creada anteriormente para usar el patron observable.
+    De tal forma de que podamos crear un observer que se encargue de detectar los cambios
+    que se hagan sobre cualquiera de las propiedades. Es decir, que el observer se debe suscribir
+    al observable y cuando exista  un cambio en una propiedad del observable, se debe imprimir en
+    consola el valor seteado.
+    Bonus:
+    al momento de hacer un setEdad, debe retornar cual es la fecha de nacimiento. en formato año mes dia.
+    */
+    public static void main(String[] args) throws InterruptedException {
+
+        var persona = new Persona();
+        persona.getPersonaObservable()
+                .subscribe(Main::printCambios, error -> System.out.println("Error: " + error.getMessage()))
+        ;
+        persona.setNombre("Juan");
         persona.setNombre("Luis");
-        persona.setNombre("Jose");
-        persona.subscribeNombre().subscribe(new Observer<String>() {
-            @Override
-            public void onSubscribe(Disposable disposable) {
-                System.out.println("Subscribe Nombre");
-            }
-
-            @Override
-            public void onNext(String nombre) {
-                System.out.println("Llego un valor del nombre: " + nombre);
-            }
-
-            @Override
-            public void onError(Throwable throwable) {
-                System.out.println("Error: "+ throwable.getMessage());
-            }
-
-            @Override
-            public void onComplete() {
-                System.out.println("finalizo nombre");
-            }
-        });
+        persona.setApellido("Gonzalez");
+        persona.setEdad(32);
+        persona.setEdad(160);
+        persona.setSigno("Geminis");
     }
+
+    public static void printCambios(PublishPersona publishPersona){
+        System.out.println("Field: '" + publishPersona.field() +
+                "', OldValue: '" + publishPersona.oldValue() +
+                "', NewValue: '" + publishPersona.newValue());
+    }
+
 }
