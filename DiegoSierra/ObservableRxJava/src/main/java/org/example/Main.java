@@ -8,33 +8,32 @@ import io.reactivex.disposables.Disposable;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
-    class PersonaObserver implements Observer {
+    static class PersonaObserver implements Observer {
 
         @Override
         public void onSubscribe(Disposable disposable) {
-
+            System.out.println("Se suscribe");
         }
 
         @Override
-        public void onNext(Object o) {
-
+        public void onNext(Object objeto) {
+            System.out.println("llego un valor del observable: " + objeto);
         }
 
         @Override
         public void onError(Throwable throwable) {
-
+            System.out.println("error");
         }
 
         @Override
         public void onComplete() {
-
+            System.out.println("finalizo el Observable 1");
         }
     }
 
     public static void main(String[] args) {
         Persona persona1 = new Persona("Juan", "Pérez", "123456789", 30, "Aries");
-        PersonaObserver observer = new PersonaObserver();
-        persona1.addObserver(observer);
+        PersonaObserver observerPersona = new PersonaObserver();
 
 
     }
