@@ -1,4 +1,4 @@
 package org.example.model;
 
-public record PublishPersona(String field, String oldValue, String newValue) {
+public record PublishPersona(String campo, String valorAnterior, String nuevoValor) {
 }

@@ -1,8 +1,6 @@
 package org.example;
 
 
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.core.Observable;
 import org.example.model.Persona;
 import org.example.model.PublishPersona;
 
@@ -16,11 +14,14 @@ public class Main {
     Bonus:
     al momento de hacer un setEdad, debe retornar cual es la fecha de nacimiento. en formato año mes dia.
     */
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
         var persona = new Persona();
         persona.getPersonaObservable()
-                .subscribe(Main::printCambios, error -> System.out.println("Error: " + error.getMessage()))
+                .subscribe(
+                        Main::printCambios,
+                        error -> System.out.println("Error: " + error.getMessage())
+                )
         ;
         persona.setNombre("Juan");
         persona.setNombre("Luis");
@@ -31,9 +32,9 @@ public class Main {
     }
 
     public static void printCambios(PublishPersona publishPersona){
-        System.out.println("Field: '" + publishPersona.field() +
-                "', OldValue: '" + publishPersona.oldValue() +
-                "', NewValue: '" + publishPersona.newValue());
+        System.out.println("Campo: '" + publishPersona.campo() +
+                "', valor anterior: '" + publishPersona.valorAnterior() +
+                "', nuevo valor: '" + publishPersona.nuevoValor());
     }
 
 }

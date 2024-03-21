@@ -2,7 +2,6 @@ package org.example.model;
 
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.subjects.PublishSubject;
-import lombok.Data;
 import lombok.Getter;
 
 import java.time.LocalDate;
@@ -23,42 +22,42 @@ public class Persona {
     private PublishSubject<PublishPersona> personaObservable = PublishSubject.create();
 
     public Observable<PublishPersona> getPersonaObservable() {
-        return personaObservable.hide();
+        return personaObservable;
     }
 
     public void setNombre(String nombre) {
-        var oldValue = this.nombre;
+        var valorAnterior = this.nombre;
         this.nombre = nombre;
-        personaObservable.onNext(new PublishPersona("nombre", oldValue, nombre));
+        personaObservable.onNext(new PublishPersona("nombre", valorAnterior, nombre));
     }
 
     public void setApellido(String apellido) {
-        var oldValue = this.apellido;
+        var valorAnterior = this.apellido;
         this.apellido = apellido;
-        personaObservable.onNext(new PublishPersona("apellido", oldValue, apellido));
+        personaObservable.onNext(new PublishPersona("apellido", valorAnterior, apellido));
     }
 
     public void setTelefono(String telefono) {
-        var oldValue = this.telefono;
+        var valorAnterior = this.telefono;
         this.telefono = telefono;
-        personaObservable.onNext(new PublishPersona("telefono", oldValue, telefono));
+        personaObservable.onNext(new PublishPersona("telefono", valorAnterior, telefono));
     }
 
     public void setEdad(int edad) {
-        var oldValue = this.edad;
+        var valorAnterior = this.edad;
         if (edad > 150){
 //            personaObservable.onError(new IllegalArgumentException("Edad no valida"));
-            personaObservable.onNext(new PublishPersona("edad", getFechaNacimientoByEdad(oldValue), "Edad no valida"));
+            personaObservable.onNext(new PublishPersona("edad", getFechaNacimientoByEdad(valorAnterior), "Edad no valida"));
             return;
         }
         this.edad = edad;
-        personaObservable.onNext(new PublishPersona("edad", getFechaNacimientoByEdad(oldValue), getFechaNacimientoByEdad(edad)));
+        personaObservable.onNext(new PublishPersona("edad", getFechaNacimientoByEdad(valorAnterior), getFechaNacimientoByEdad(edad)));
     }
 
     public void setSigno(String signo) {
-        var oldValue = this.signo;
+        var valorAnterior = this.signo;
         this.signo = signo;
-        personaObservable.onNext(new PublishPersona("signo", oldValue, signo));
+        personaObservable.onNext(new PublishPersona("signo", valorAnterior, signo));
     }
 
     public String getFechaNacimientoByEdad(int edad){
