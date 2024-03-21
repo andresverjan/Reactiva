@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Main/Main.iml" filepath="$PROJECT_DIR$/Main/Main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Reactiva.iml" filepath="$PROJECT_DIR$/.idea/Reactiva.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Reactiva.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Reactiva.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Reactiva.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Reactiva.test.iml" />
     </modules>
   </component>
 </project>
