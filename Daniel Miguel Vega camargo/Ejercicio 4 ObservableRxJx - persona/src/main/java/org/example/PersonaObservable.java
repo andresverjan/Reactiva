@@ -3,7 +3,7 @@ package org.example;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Getter; 
 
 @Getter
 @AllArgsConstructor
