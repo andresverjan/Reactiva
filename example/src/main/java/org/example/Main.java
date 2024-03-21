@@ -1,8 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -22,56 +20,81 @@ public class Main {
                 new Persona("Rosa", "Jiménez", "998877665", 29, "Sagitario")
         );
 
-        // Modo Declarativo
-        List<Persona> acuario = personas.stream()
-                        .filter(p ->"Acuario".equalsIgnoreCase(p.getSigno()))
-                .toList();
 
-        List<Persona> mayores25 = personas.stream()
-                        .filter(p -> p.getEdad() > 25)
-                                .toList();
+        Scanner scanner = new Scanner(System.in);
+        while(true) {
+            System.out.println("Por favor, elige una opción:");
+            System.out.println("1. Obtener personas por signo (declarativo)");
+            System.out.println("2. Obtener personas por edad (declarativo)");
+            System.out.println("3. Obtener personas por signo (imperativo)");
+            System.out.println("4. Obtener personas por edad (imperativo)");
+            System.out.println("5. Salir");
 
-        System.out.println("Persona de signo acuario");
-        System.out.println("**************");
-        System.out.println("**************");
-        acuario.forEach(System.out::println);
+            String opcion = scanner.nextLine();
 
+            switch (opcion) {
+                case "1" -> {
+                    System.out.println("Por favor, introduce el signo.");
+                    String signo = scanner.nextLine();
+                        System.out.println(obtenerPersonasPorSignoDeclarativo(personas, signo));
 
-        System.out.println("Personas mayores a 25 años");
-        System.out.println("**************");
-        System.out.println("**************");
-        mayores25.forEach(System.out::println);
+                }
+                case "2" -> {
+                    System.out.println("Por favor, introduce la edad.");
+                    int edad = scanner.nextInt();
 
-
-
-        //Modo imperativo
-        List<Persona> acuarioImperativo = new ArrayList<>();
-        for (Persona p : personas) {
-            if ("Acuario".equalsIgnoreCase(p.getSigno())) {
-                acuarioImperativo.add(p);
+                    System.out.println(obtenerPersonasPorEdadDeclarativo(personas, edad));
+                }
+                case "3" -> {
+                    System.out.println("Por favor, introduce el signo.");
+                    String signo = scanner.nextLine();
+                        System.out.println(obtenerPersonasPorSignoImperativo(personas, signo));
+                }
+                case "4" -> {
+                    System.out.println("Por favor, introduce la edad.");
+                    int edad = scanner.nextInt();
+                    System.out.println(obtenerPersonasPorEdadImperativo(personas, edad));
+                }
+                case "5" -> {
+                    System.out.println("Saliendo.....");
+                    return;
+                }
+                default -> System.out.println("Opción no válida.Por favor, intente de nuevo.");
             }
-        }
-
-        List<Persona> mayores25_2 = new ArrayList<>();
-        for (Persona p: personas) {
-            if (p.getEdad() > 25) {
-                mayores25_2.add(p);
-            }
-        }
-
-        System.out.println("Persona de signo acuario");
-        System.out.println("**************");
-        System.out.println("**************");
-        for (Persona p: acuario) {
-            System.out.println(p);
-        }
-
-        System.out.println("Personas mayores a 25 años");
-        System.out.println("**************");
-        System.out.println("**************");
-        for (Persona p: mayores25_2) {
-            System.out.println(p);
         }
     }
 
+    public static List<Persona> obtenerPersonasPorSignoDeclarativo(List<Persona> personas, String signo) {
+        return personas.stream()
+                .filter(p -> p.getSigno().equalsIgnoreCase(signo))
+                .toList();
+    }
+
+    public static List<Persona> obtenerPersonasPorEdadDeclarativo(List<Persona> personas, int edad) {
+        return personas.stream()
+                .filter(p -> p.getEdad() > edad)
+                .toList();
+    }
+
+    public static List<Persona> obtenerPersonasPorSignoImperativo(List<Persona> personas, String signo) {
+        List<Persona> resultado = new ArrayList<>();
+        for(Persona p : personas) {
+            if(p.getSigno().equalsIgnoreCase(signo)) {
+                resultado.add(p);
+            }
+        }
+        return resultado;
+    }
+
+    public static List<Persona> obtenerPersonasPorEdadImperativo(List<Persona> personas, int edad) {
+        List<Persona> resultado = new ArrayList<>();
+        for (Persona p : personas) {
+            if (p.getEdad() > edad) {
+                resultado.add(p);
+            }
+        }
+        return resultado;
+
+    }
 }
+
