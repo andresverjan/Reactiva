@@ -4,6 +4,8 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
+import java.time.LocalDate;
+
 public class PersonaObservable {
         private Observable<String> nombre;
         private Observable<String> apellido;
@@ -122,6 +124,7 @@ public class PersonaObservable {
             @Override
             public void onNext(Integer integer) {
                 System.out.println("Se Modifico  la edad a " + integer);
+                System.out.println("Su fecha de nacimiento es " + LocalDate.now().minusYears(integer).toString());
             }
 
             @Override

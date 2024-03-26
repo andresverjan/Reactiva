@@ -20,6 +20,7 @@ public class Main {
         PersonaObservable personaObservable = new PersonaObservable();
         personaObservable.setNombre(Observable.create(emitter -> emitter.onNext("Holita")));
         personaObservable.setApellido(Observable.create(emitter -> emitter.onNext("Holita2")));
+        personaObservable.setEdad(Observable.create(emitter -> emitter.onNext(12)));
     }
 
     private static void ejercicioClase() {
